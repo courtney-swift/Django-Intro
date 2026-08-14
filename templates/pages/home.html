@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog</title>
-</head>
-<body>
-  <h1>Home Page Using Django</h1>
-  <p>Put a Paragraph here</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <h1>Home Page using DTL</h1>
+    <p>I have experience working remotely in a Network Operations Center, where I monitored enterprise networks, investigated technical issues, documented incidents, and coordinated escalations with other teams. Clear written communication, detailed ticket notes, regular status updates, and taking ownership of tasks have worked well for me, especially when coworkers are working different schedules or time zones. The main challenges have been delays in receiving responses and the lack of face-to-face communication, but I manage these by documenting my work carefully, asking clear questions, prioritizing tasks, and following up when necessary.
+    </p>
+    
+<div class="photo">
+    <img width="500" img src="{% static 'img/Luxury.jpg' %}" alt="Luxury Cars">
+</div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
