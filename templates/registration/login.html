@@ -7,14 +7,15 @@
 {% endblock %}
 
 {% block title %}
-  Create New Post
+
 {% endblock %}
 
 {% block content %}
-  <h1>Create New Post</h1>
+  <h1>Log In</h1>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <input type="submit" value="Create" class="btn btn-success">
+    <input type="submit" value="Log In" class="btn btn-success">
   </form>
+  <a href="{% url 'password_reset' %}" class="btn btn-secondary">Forgot Password?</a>
 {% endblock %}
